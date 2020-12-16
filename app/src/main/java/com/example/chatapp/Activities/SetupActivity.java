@@ -239,7 +239,7 @@ public class SetupActivity extends AppCompatActivity {
                                                         public void onSuccess(Uri uri) {
                                                             coverImageUrl = uri.toString();
                                                             storeProgressDialog.show();
-                                                            User user = new User(email, password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
+                                                            User user = new User(email, null,password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
                                                             SplashActivity.firebaseFirestore.collection(Cons.USERS_COLLECTION_REF).document(email).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                                 @Override
                                                                 public void onSuccess(Void aVoid) {
@@ -319,7 +319,7 @@ public class SetupActivity extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     personalImageUrl = uri.toString();
                                     storeProgressDialog.show();
-                                    User user = new User(email, password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
+                                    User user = new User(email, null,password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
                                     SplashActivity.firebaseFirestore.collection(Cons.USERS_COLLECTION_REF).document(email).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
@@ -377,7 +377,7 @@ public class SetupActivity extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     coverImageUrl = uri.toString();
                                     storeProgressDialog.show();
-                                    User user = new User(email, password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
+                                    User user = new User(email, null, password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
                                     SplashActivity.firebaseFirestore.collection(Cons.USERS_COLLECTION_REF).document(email).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
@@ -421,7 +421,7 @@ public class SetupActivity extends AppCompatActivity {
             });
         } else {
             storeProgressDialog.show();
-            User user = new User(email, password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
+            User user = new User(email, null, password, name, personalImageUrl, coverImageUrl, description, dateOfBirth, true, true);
             SplashActivity.firebaseFirestore.collection(Cons.USERS_COLLECTION_REF).document(email).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {

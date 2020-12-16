@@ -7,6 +7,7 @@ import java.util.Calendar;
 
 public class User implements Serializable {
     private String email;
+    private String mobile;
     private String password;
     private String name;
     private String personalImage;
@@ -21,8 +22,9 @@ public class User implements Serializable {
     private int friendsId;
     private long lastActiveTime;
 
-    public User(String email, String password, String name, String personalImage, String coverImage, String description, long dateOfBirth, boolean isAccountCompleted, boolean isAccountActive) {
+    public User(String email,String mobile, String password, String name, String personalImage, String coverImage, String description, long dateOfBirth, boolean isAccountCompleted, boolean isAccountActive) {
         this.email = email;
+        this.mobile = mobile;
         this.password = password;
         this.name = name;
         this.personalImage = personalImage;
@@ -159,6 +161,14 @@ public class User implements Serializable {
 
     public void setAccountActive(boolean accountActive) {
         isAccountActive = accountActive;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     @Exclude

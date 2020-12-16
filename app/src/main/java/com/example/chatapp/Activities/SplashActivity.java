@@ -15,14 +15,18 @@ public class SplashActivity extends AppCompatActivity {
     public static FirebaseFirestore firebaseFirestore;
     public static FirebaseStorage firebaseStorage;
 
+    static {
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseStorage = FirebaseStorage.getInstance();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         createChannel();
         // Firebase variables implementation
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        firebaseStorage = FirebaseStorage.getInstance();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
