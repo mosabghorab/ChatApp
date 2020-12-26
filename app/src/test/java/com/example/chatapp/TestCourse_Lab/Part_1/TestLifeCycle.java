@@ -1,4 +1,4 @@
-package com.example.chatapp;
+package com.example.chatapp.TestCourse_Lab.Part_1;
 
 import com.example.chatapp.Models.Message;
 import com.example.chatapp.Models.User;

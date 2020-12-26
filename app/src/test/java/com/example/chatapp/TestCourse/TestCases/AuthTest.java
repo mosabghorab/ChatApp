@@ -1,6 +1,6 @@
-package com.example.chatapp.TestCases;
+package com.example.chatapp.TestCourse.TestCases;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.example.chatapp.Cons;
 import com.example.chatapp.Models.User;
@@ -14,10 +14,11 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
 import static org.junit.Assert.assertTrue;
 
 public class AuthTest {
-    private FirebaseFirestore firebaseFirestore;
+    FirebaseFirestore firebaseFirestore;
     private boolean isUserCreatedSuccessfully;
     private boolean isUserLoggedInSuccessfully;
 
@@ -29,7 +30,7 @@ public class AuthTest {
     @Before
     public void before() {
         System.out.println("Before");
-        firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseFirestore =  FirebaseFirestore.getInstance();
         isUserCreatedSuccessfully = false;
         isUserLoggedInSuccessfully = false;
     }

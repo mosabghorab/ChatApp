@@ -1,13 +1,12 @@
 package com.example.chatapp.Activities;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +15,6 @@ import com.example.chatapp.Adapters.UserRecyclerAdapter;
 import com.example.chatapp.Cons;
 import com.example.chatapp.Models.User;
 import com.example.chatapp.R;
-import com.google.android.gms.common.util.DataUtils;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.QueryDocumentSnapshot;

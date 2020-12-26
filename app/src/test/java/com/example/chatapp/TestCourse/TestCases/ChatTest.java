@@ -1,17 +1,12 @@
-package com.example.chatapp.TestCases;
+package com.example.chatapp.TestCourse.TestCases;
 
-import android.support.annotation.NonNull;
-import android.widget.Toast;
+import androidx.annotation.NonNull;
 
-import com.example.chatapp.Activities.SplashActivity;
 import com.example.chatapp.Cons;
 import com.example.chatapp.Models.Friend;
 import com.example.chatapp.Models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.junit.After;

@@ -3,32 +3,22 @@ package com.example.chatapp.Services;
 import android.app.IntentService;
 import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.NotificationCompat;
+import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.example.chatapp.Activities.FreindsRequestsActivity;
 import com.example.chatapp.Activities.SplashActivity;
-import com.example.chatapp.Adapters.FriendsRequestsRecyclerAdapter;
 import com.example.chatapp.Cons;
 import com.example.chatapp.Models.FriendRequest;
-import com.example.chatapp.Models.User;
 import com.example.chatapp.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentChange;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
 
 import javax.annotation.Nullable;
 

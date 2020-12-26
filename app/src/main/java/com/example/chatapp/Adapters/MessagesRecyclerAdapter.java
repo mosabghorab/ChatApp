@@ -1,32 +1,20 @@
 package com.example.chatapp.Adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.chatapp.Activities.SplashActivity;
-import com.example.chatapp.Cons;
-import com.example.chatapp.Models.Friend;
-import com.example.chatapp.Models.FriendRequest;
 import com.example.chatapp.Models.Message;
 import com.example.chatapp.Models.User;
 import com.example.chatapp.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.squareup.picasso.Picasso;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
