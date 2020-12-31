@@ -18,6 +18,7 @@ import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 
 @RunWith(AndroidJUnit4.class)
@@ -29,8 +30,17 @@ public class LoginActivityTest {
 
 
     @Test
-    public  void testIsVisible() {
+    public  void testClick() {
         // this is a button.
         onView(ViewMatchers.withId(R.id.btn_login)).perform(click());
     }
+
+    @Test
+    public void editTextTest() {
+        onView(withId(R.id.edit_text_email))
+                .check(matches(withText("mosab@gmail.com")));
+
+    }
+
 }
+
